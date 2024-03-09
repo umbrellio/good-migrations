@@ -13,7 +13,8 @@ module GoodMigrations
     end
 
     def app_path?(path)
-      path.starts_with? File.join(Rails.application.root, "app")
+      path.starts_with?(File.join(Rails.application.root, "app")) ||
+        path.starts_with?(File.join(Rails.application.root, "apps"))
     end
   end
 end
